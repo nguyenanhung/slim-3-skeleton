@@ -12,7 +12,7 @@ return [
         // Monolog settings
         'logger'                 => [
             'name'  => 'app',
-            'path'  => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/Log-' . date('Y-m-d') . '.log',
+            'path'  => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../storage/logs/Log-' . date('Y-m-d') . '.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
 
