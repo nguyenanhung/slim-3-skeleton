@@ -6,27 +6,27 @@
  * Date: 10/23/18
  * Time: 22:24
  */
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Commands\DemoCommand;
+use App\Command\TestCommand;
 
-$demoCommand = new DemoCommand();
+$test_command = new TestCommand();
 
 /** @var object $app */
 $app = new Application();
 
 // Set up dependencies
-require __DIR__ . '/../src/dependencies.php';
+require __DIR__ . '/src/dependencies.php';
 
 // Register middleware
-require __DIR__ . '/../src/middleware.php';
+require __DIR__ . '/src/middleware.php';
 
 // Register routes
-require __DIR__ . '/../src/routes.php';
+require __DIR__ . '/src/routes.php';
 
 // Register command
-$app->add($demoCommand);
+$app->add($test_command);
 
 // Run application
 $app->run();

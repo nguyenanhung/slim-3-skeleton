@@ -4,21 +4,16 @@
  * Created by PhpStorm.
  * User: 713uk13m <dev@nguyenanhung.com>
  * Date: 10/23/18
- * Time: 22:27
+ * Time: 22:38
  */
 
-namespace Commands;
+namespace App\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-/**
- * Class DemoCommand
- *
- * @package Command
- */
-class DemoCommand extends Command
+class TestCommand extends Command
 {
     /**
      * Function configure
