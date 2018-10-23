@@ -7,7 +7,7 @@
         "router",
         "psr7"
     ],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "homepage": "http://github.com/nguyenanhung/slim-3-skeleton",
     "license": "MIT",
     "authors": [
         {
