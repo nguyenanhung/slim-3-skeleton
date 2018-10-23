@@ -203,9 +203,6 @@ Temporary Items
 /web/bundles/
 /web/uploads/
 
-# PHPUnit
-/app/phpunit.xml
-/phpunit.xml
 
 # Build data
 /build/
@@ -219,3 +216,4 @@ Temporary Items
 # Embedded web-server pid file
 /.web-server-pid
 
+!/phpunit.xml
