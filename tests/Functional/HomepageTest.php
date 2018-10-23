@@ -6,6 +6,12 @@ class HomepageTest extends BaseTestCase
 {
     /**
      * Test that the index route returns a rendered response containing the text 'SlimFramework' but not a greeting
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/24/18 00:35
+     *
+     * @throws \Slim\Exception\MethodNotAllowedException
+     * @throws \Slim\Exception\NotFoundException
      */
     public function testGetHomepageWithoutName()
     {
@@ -18,6 +24,12 @@ class HomepageTest extends BaseTestCase
 
     /**
      * Test that the index route won't accept a post request
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/24/18 00:35
+     *
+     * @throws \Slim\Exception\MethodNotAllowedException
+     * @throws \Slim\Exception\NotFoundException
      */
     public function testPostHomepageNotAllowed()
     {
