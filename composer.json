@@ -40,7 +40,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/App/",
-            "App\\Command\\": "src/Commands/"
+            "App\\Command\\": "src/Commands/",
+            "App\\Library\\": "src/Library/"
         }
     },
     "autoload-dev": {

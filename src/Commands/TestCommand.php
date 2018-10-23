@@ -26,7 +26,7 @@ class TestCommand extends Command
     {
         $this
             // the name of the command (the part after "bin/console")
-            ->setName('app:demo-command')
+            ->setName('app:test-command')
             // the short description shown while running "php bin/console list"
             ->setDescription("Hello World!")
             // the full command description shown when running the command with
@@ -47,7 +47,7 @@ class TestCommand extends Command
      *
      * @return int|null|void
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output)
     {
         // Example code
         $output->writeLn("Hello World!");

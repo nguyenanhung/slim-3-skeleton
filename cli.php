@@ -1,3 +1,4 @@
+#! usr/bin/env php
 <?php
 /**
  * Project slim-3-skeleton.
@@ -7,26 +8,17 @@
  * Time: 22:24
  */
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/src/classmap.php';
 
 use Symfony\Component\Console\Application;
-use App\Command\TestCommand;
 
-$test_command = new TestCommand();
+$test_command = new \App\Command\TestCommand();
 
-/** @var object $app */
-$app = new Application();
-
-// Set up dependencies
-require __DIR__ . '/src/dependencies.php';
-
-// Register middleware
-require __DIR__ . '/src/middleware.php';
-
-// Register routes
-require __DIR__ . '/src/routes.php';
+/** @var object $console */
+$console = new Application();
 
 // Register command
-$app->add($test_command);
+$console->add($test_command);
 
 // Run application
-$app->run();
+$console->run();
