@@ -31,4 +31,30 @@ function registerCommand($className = '')
     }
 }
 
+/**
+ * Function registerLibrary
+ *
+ * @author: 713uk13m <dev@nguyenanhung.com>
+ * @time  : 10/23/18 23:21
+ *
+ * @param string $className
+ */
+function registerLibrary($className = '')
+{
+    $root   = 'src/Library/';
+    $prefix = 'App\\Library\\';
+
+    // bỏ prefix
+    $classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
+
+    // Thay thế \ thành /
+    $file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
+
+    $path = $root . $file;
+    if (is_file($path) && file_exists($path)) {
+        require_once $path;
+    }
+}
+
 spl_autoload_register('registerCommand');
+spl_autoload_register('registerLibrary');

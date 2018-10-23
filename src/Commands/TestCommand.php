@@ -12,9 +12,13 @@ namespace App\Command;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use App\Library\Config;
 
 class TestCommand extends Command
 {
+    /** @var object \Psr\Container\ContainerInterface */
+    protected $container;
+
     /**
      * Function configure
      *

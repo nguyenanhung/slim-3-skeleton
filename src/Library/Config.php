@@ -16,22 +16,18 @@ namespace App\Library;
  */
 class Config
 {
-    const CONFIG_PATH = 'config';
-    const CONFIG_EXT  = '.php';
-
     /**
      * Function getData
      *
      * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/23/18 23:15
+     * @time  : 10/23/18 23:22
      *
-     * @param $configName
+     * @param string $path
      *
      * @return array|mixed
      */
-    public static function getData($configName)
+    public static function getData($path = '')
     {
-        $path = __DIR__ . DIRECTORY_SEPARATOR . self::CONFIG_PATH . DIRECTORY_SEPARATOR . $configName . self::CONFIG_EXT;
         if (is_file($path) && file_exists($path)) {
             return require($path);
         }
