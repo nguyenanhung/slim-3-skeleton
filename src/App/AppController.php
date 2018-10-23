@@ -47,6 +47,7 @@ class AppController
      */
     public function test(Request $request, Response $response)
     {
+        $this->logger->info(__FUNCTION__);
         $params = $request->getQueryParams();
 
         return $response->withJson($params);
