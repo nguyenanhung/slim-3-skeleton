@@ -1,12 +1,13 @@
 <?php
 
 namespace Tests\Functional;
+require __DIR__ . '/../../src/classmap.php';
 
 use Slim\App;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
-
+use Symfony\Component\Console\Application;
 /**
  * This is an example class that shows how you could set up a method that
  * runs the application. Note that it doesn't cover all use-cases and is
@@ -76,5 +77,23 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
 
         // Return the response
         return $response;
+    }
+
+    /**
+     * Function runConsole
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/24/18 00:39
+     *
+     * @param $command
+     *
+     * @return int
+     * @throws \Exception
+     */
+    public function runConsole($command)
+    {
+        $console = new Application();
+        $console->add($command);
+        return $console->run();
     }
 }
