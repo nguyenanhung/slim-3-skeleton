@@ -20,23 +20,26 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
      *
      * @var bool
      */
-    protected $withMiddleware = true;
+    protected $withMiddleware = TRUE;
 
     /**
      * Process the application given a request method and URI
      *
-     * @param string $requestMethod the request method (e.g. GET, POST, etc.)
-     * @param string $requestUri the request URI
-     * @param array|object|null $requestData the request data
-     * @return \Slim\Http\Response
+     * @param string            $requestMethod the request method (e.g. GET, POST, etc.)
+     * @param string            $requestUri    the request URI
+     * @param array|object|null $requestData   the request data
+     *
+     * @return \Psr\Http\Message\ResponseInterface|\Slim\Http\Response
+     * @throws \Slim\Exception\MethodNotAllowedException
+     * @throws \Slim\Exception\NotFoundException
      */
-    public function runApp($requestMethod, $requestUri, $requestData = null)
+    public function runApp($requestMethod, $requestUri, $requestData = NULL)
     {
         // Create a mock environment for testing with
         $environment = Environment::mock(
             [
                 'REQUEST_METHOD' => $requestMethod,
-                'REQUEST_URI' => $requestUri
+                'REQUEST_URI'    => $requestUri
             ]
         );
 
