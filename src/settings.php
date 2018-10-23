@@ -18,7 +18,7 @@ return [
 
         // Cấu hình Database
         'db'                     => [
-            'dsn'      => 'mysql:host=127.0.0.1;dbname=test_database;charset=utf8',
+            'dsn'      => 'mysql:host=127.0.0.1;dbname=slim_test;charset=utf8',
             'username' => 'root',
             'password' => '',
         ]

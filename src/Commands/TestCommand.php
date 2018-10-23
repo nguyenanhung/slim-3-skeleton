@@ -13,6 +13,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use App\Library\Config;
+use App\Library\Db;
 
 class TestCommand extends Command
 {
@@ -53,7 +54,15 @@ class TestCommand extends Command
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        // Example code
+        // Load config
+        $settings = Config::getSettings();
+        // Example Load DB
+        $db      = Db::load($settings['db']);
+        $query   = $db->select()->from('TuVi')->where('date', '=', '2018-10-24');
+        $execute = $query->execute();
+        $content = $execute->fetch();
+        $output->writeLn(json_encode($content));
+        // Example Output String
         $output->writeLn("Hello World!");
     }
 }

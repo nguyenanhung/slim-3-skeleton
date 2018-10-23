@@ -34,4 +34,24 @@ class Config
 
         return [];
     }
+
+    /**
+     * Function getSettings
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/23/18 23:58
+     *
+     * @return array
+     */
+    public static function getSettings()
+    {
+        $file = __DIR__ . '/../settings.php';
+        if (is_file($file) && file_exists($file)) {
+            $result = require(__DIR__ . '/../settings.php');
+
+            return $result['settings'];
+        }
+
+        return [];
+    }
 }
