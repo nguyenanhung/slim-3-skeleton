@@ -75,10 +75,14 @@ class AppController
         $params = [
             'request' => $request->getQueryParams(),
             'data'    => [
-                'checkExists' => $db->checkExists('102001'),
-                'getLatest'   => $db->getLatest('id'),
-                'getOldest'   => $db->getOldest('id'),
-                'getInfo'     => $db->getInfo('10200'),
+                'sum' => $db->getSum('id')
+                //                'checkExists'       => $db->checkExists('102001'),
+                //                'getLatest'         => $db->getLatest('id'),
+                //                'getOldest'         => $db->getOldest('id'),
+                //                'getInfo'           => $db->getInfo('10200'),
+                //                'getDistinctResult' => $db->getDistinctResult('service'),
+                //                'add'               => $db->add(['service' => 'TV', 'mt' => 'TEST - ' . rand(1, 999999),
+                //                                                 'date'    => date('Y-m-d'), 'timeCreated' => date('Y-m-d H:i:s')])
             ]
         ];
 
