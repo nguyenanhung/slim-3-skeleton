@@ -1,6 +1,4 @@
 <?php
-// Require global constants
-require __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
 
 // Settings Data
 return [

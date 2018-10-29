@@ -59,6 +59,7 @@
     },
     "scripts": {
         "start": "php -S localhost:8080 -t public",
-        "test": "./vendor/bin/phpunit"
+        "test": "./vendor/bin/phpunit",
+        "worker": "php cli.php"
     }
 }
