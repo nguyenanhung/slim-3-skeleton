@@ -7,7 +7,7 @@ return [
         'addContentLengthHeader' => FALSE, // Allow the web server to send the content-length header
 
         // Site Url
-        'base_url' => '',
+        'base_url'               => '',
 
         // Renderer settings
         'renderer'               => [

@@ -13,6 +13,7 @@ namespace App\Library;
  * Class Db
  *
  * @package App\Library
+ * @author  713uk13m <dev@nguyenanhung.com>
  */
 class Db
 {
