@@ -20,6 +20,21 @@ class AppTest extends BaseTestCase
     }
 
     /**
+     * Function testGetAppDbTest
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 16:28
+     *
+     * @throws \Slim\Exception\MethodNotAllowedException
+     * @throws \Slim\Exception\NotFoundException
+     */
+    public function testGetAppDbTest()
+    {
+        $response = $this->runApp('GET', '/app/testDb');
+        $this->assertEquals(200, $response->getStatusCode());
+    }
+
+    /**
      * Test that the /app/test route won't accept a post request
      *
      * @author: 713uk13m <dev@nguyenanhung.com>

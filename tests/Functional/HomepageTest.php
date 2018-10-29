@@ -36,19 +36,4 @@ class HomepageTest extends BaseTestCase
         $this->assertEquals(405, $response->getStatusCode());
         $this->assertContains('Method not allowed', (string) $response->getBody());
     }
-
-    /**
-     * Function testAppDb
-     *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 16:23
-     *
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
-     */
-    public function testAppDb()
-    {
-        $response = $this->runApp('GET', '/app/testDb');
-        $this->assertEquals(200, $response->getStatusCode());
-    }
 }

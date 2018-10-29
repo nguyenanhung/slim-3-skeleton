@@ -2,7 +2,11 @@
     "name": "nguyenanhung/slim-3-skeleton",
     "description": "A Slim Framework 3 skeleton application for rapid development",
     "keywords": [
-        "microframework",
+        "micro framework",
+        "php micro framework",
+        "slim",
+        "slim 3",
+        "skeleton",
         "rest",
         "router",
         "psr7"
