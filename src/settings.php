@@ -1,4 +1,11 @@
 <?php
+/**
+ * Project slim-3-skeleton.
+ * Created by PhpStorm.
+ * User: 713uk13m <dev@nguyenanhung.com>
+ * Date: 10/29/18
+ * Time: 16:44
+ */
 
 // Settings Data
 return [

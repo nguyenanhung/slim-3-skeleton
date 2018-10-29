@@ -36,10 +36,10 @@ class BaseModel implements BaseModelInterface
     const ORDER_ASCENDING                   = 'asc';
     const ORDER_DESCENDING                  = 'desc';
     const PRIMARY_KEY                       = 'id';
-    
+
     /** @var object \Slim\PDO\Database */
     protected $db;
-    /** @var string */
+    /** @var string Table to Setup */
     protected $table;
 
     /**
@@ -58,7 +58,7 @@ class BaseModel implements BaseModelInterface
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 11:53
      *
-     * @param string $table
+     * @param string $table Table Database to Setup
      */
     public function setTable($table = '')
     {
