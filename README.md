@@ -103,10 +103,7 @@ Now, Project structure project is follow structure below
 │   │   └── README.md
 │   ├── database
 │   │   ├── README.md
-│   │   └── slim_test.sql
 │   └── logs
-│       ├── Log-2018-10-23.log
-│       ├── Log-2018-10-29.log
 │       └── README.md
 ├── structure.md
 ├── templates
