@@ -56,5 +56,31 @@ function registerLibrary($className = '')
     }
 }
 
+/**
+ * Function registerHelper
+ *
+ * @author: 713uk13m <dev@nguyenanhung.com>
+ * @time  : 10/29/18 16:15
+ *
+ * @param string $className
+ */
+function registerHelper($className = '')
+{
+    $root   = 'src/Helper/';
+    $prefix = 'App\\Helper\\';
+
+    // bỏ prefix
+    $classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
+
+    // Thay thế \ thành /
+    $file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
+
+    $path = $root . $file;
+    if (is_file($path) && file_exists($path)) {
+        require_once $path;
+    }
+}
+
 spl_autoload_register('registerCommand');
 spl_autoload_register('registerLibrary');
+spl_autoload_register('registerHelper');
