@@ -1,8 +1,13 @@
 <?php
+define('PROJECT_ENV', 'production');
+
 return [
     'settings' => [
         'displayErrorDetails'    => TRUE, // set to false in production
         'addContentLengthHeader' => FALSE, // Allow the web server to send the content-length header
+
+        // Site Url
+        'base_url' => '',
 
         // Renderer settings
         'renderer'               => [
