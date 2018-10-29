@@ -12,7 +12,9 @@ namespace App\Library;
 /**
  * Interface BaseModelInterface
  *
- * @package App\Library
+ * @package   App\Library
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
  */
 interface BaseModelInterface
 {

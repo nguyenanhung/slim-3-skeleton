@@ -15,6 +15,13 @@ use Symfony\Component\Console\Output\OutputInterface;
 use App\Library\Config;
 use App\Library\Db;
 
+/**
+ * Class TestCommand
+ *
+ * @package   App\Command
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
+ */
 class TestCommand extends Command
 {
     /** @var object \Psr\Container\ContainerInterface */

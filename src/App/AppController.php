@@ -15,6 +15,13 @@ use Psr\Container\ContainerInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
+/**
+ * Class AppController
+ *
+ * @package   App
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
+ */
 class AppController
 {
     /** @var object \Psr\Container\ContainerInterface */
