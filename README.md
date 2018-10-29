@@ -1,6 +1,6 @@
 # Slim Framework 3 Skeleton Application
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the **PHP-View** template renderer, **Slim-PDO** is Database Handle, **symfony/console** is Console Handle. It also uses the Monolog logger.
+Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the **PHP-View** template renderer, **Slim-PDO** is Database Handle, **symfony/console** is Console Handle. It also uses the **Monolog** logger.
 
 This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
 
@@ -36,6 +36,12 @@ Run this command in the application directory to run the test suite
 php composer.phar test
 ```
 
+or 
+
+```shell
+./vendor/bin/phpunit
+```
+
 That's it! Now go build something cool.
 
 ## Running via CLI / Command Line Interface
@@ -45,16 +51,22 @@ Project **slim-3-skeleton** use **symfony/console** is handle Console request
 Example
 
 ```shell
-php cli.php app:test-command
+composer worker app:test-command
+```
+
+or 
+
+```shell
+php cli.php  app:test-command
 ```
 
 @see: https://symfony.com/doc/3.4/components/console.html
 
 
 
-## Structure Folder
+## Structure Project
 
-Folder structure project
+Now, Project structure project is follow structure below
 
 ```reStructuredText
 [my-app-name]
@@ -72,11 +84,17 @@ Folder structure project
 │   │   └── AppController.php
 │   ├── Commands
 │   │   └── TestCommand.php
+│   ├── Helper
 │   ├── Library
+│   │   ├── BaseModel.php
+│   │   ├── BaseModelInterface.php
 │   │   ├── Config.php
 │   │   └── Db.php
+│   ├── bootstrap.php
 │   ├── classmap.php
+│   ├── constants.php
 │   ├── dependencies.php
+│   ├── helpers.php
 │   ├── middleware.php
 │   ├── routes.php
 │   └── settings.php
@@ -87,17 +105,21 @@ Folder structure project
 │   │   ├── README.md
 │   │   └── slim_test.sql
 │   └── logs
+│       ├── Log-2018-10-23.log
+│       ├── Log-2018-10-29.log
 │       └── README.md
 ├── structure.md
 ├── templates
 │   └── index.phtml
 ├── tests
 │   └── Functional
+│       ├── AppTest.php
 │       ├── BaseTestCase.php
 │       └── HomepageTest.php
 └── vendor
     ├── autoload.php
     ├── bin
+    │   └── phpunit -> ../phpunit/phpunit/phpunit
     ├── composer
     ├── container-interop
     ├── doctrine
@@ -109,10 +131,14 @@ Folder structure project
     ├── phpdocumentor
     ├── phpspec
     ├── phpunit
+    ├── pimple
     ├── psr
     ├── sebastian
+    ├── slim
     ├── symfony
     └── webmozart
+
+425 directories, 2226 files
 ```
 
 
