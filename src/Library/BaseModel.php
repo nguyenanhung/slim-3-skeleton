@@ -36,6 +36,7 @@ class BaseModel implements BaseModelInterface
     const ORDER_ASCENDING                   = 'asc';
     const ORDER_DESCENDING                  = 'desc';
     const PRIMARY_KEY                       = 'id';
+    
     /** @var object \Slim\PDO\Database */
     protected $db;
     /** @var string */
