@@ -25,6 +25,26 @@
  */
 defined('ENVIRONMENT') OR define('ENVIRONMENT', 'production');
 
+// Project Path
+defined('PROJECT_PATH') OR define('PROJECT_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
+
+// Directory mapping
+defined('VENDOR_PATH') OR define('VENDOR_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR);
+defined('TEMPLATE_PATH') OR define('TEMPLATE_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR);
+defined('PUBLIC_PATH') OR define('PUBLIC_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
+
+// Source Path
+defined('SOURCE_PATH') OR define('SOURCE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
+defined('APP_PATH') OR define('APP_PATH', SOURCE_PATH . 'App' . DIRECTORY_SEPARATOR);
+defined('COMMANDS_PATH') OR define('COMMANDS_PATH', SOURCE_PATH . 'Commands' . DIRECTORY_SEPARATOR);
+defined('HELPER_PATH') OR define('HELPER_PATH', SOURCE_PATH . 'Helper' . DIRECTORY_SEPARATOR);
+defined('LIBRARY_PATH') OR define('LIBRARY_PATH', SOURCE_PATH . 'Library' . DIRECTORY_SEPARATOR);
+
+// Storage Path
+defined('STORAGE_PATH') OR define('STORAGE_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR);
+defined('CACHE_PATH') OR define('CACHE_PATH', STORAGE_PATH . 'cache' . DIRECTORY_SEPARATOR);
+defined('LOGS_PATH') OR define('LOGS_PATH', STORAGE_PATH . 'logs' . DIRECTORY_SEPARATOR);
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
