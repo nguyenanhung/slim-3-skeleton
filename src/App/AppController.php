@@ -57,8 +57,8 @@ class AppController
     public function test(Request $request, Response $response)
     {
         $this->logger->info(__FUNCTION__);
-        $params         = $request->getQueryParams();
-        $params['path'] = PROJECT_PATH;
+        $params            = $request->getQueryParams();
+        $params['version'] = VERSION;
 
         return $response->withJson($params);
     }
