@@ -1,6 +1,8 @@
 <?php
-// define('PROJECT_ENV', 'production');
+// Require global constants
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
 
+// Settings Data
 return [
     'settings' => [
         'displayErrorDetails'    => TRUE, // set to false in production
