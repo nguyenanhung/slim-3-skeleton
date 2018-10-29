@@ -160,9 +160,9 @@ interface BaseModelInterface
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:33
      *
-     * @param string $column
-     * @param string $as
-     * @param array  $wheres
+     * @param string      $column
+     * @param string|null $as
+     * @param array       $wheres
      *
      * @return mixed
      */

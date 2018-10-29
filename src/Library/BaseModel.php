@@ -266,13 +266,13 @@ class BaseModel implements BaseModelInterface
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:33
      *
-     * @param string $column
-     * @param string $as
-     * @param array  $wheres
+     * @param string      $column
+     * @param string|null $as
+     * @param array       $wheres
      *
      * @return mixed
      */
-    public function getSum($column = '*', $as = 'count', $wheres = [])
+    public function getSum($column = '*', $as = NULL, $wheres = [])
     {
         $columns = !is_array($column) ? [$column] : ['*'];
         $db      = $this->db->select($columns)->from($this->table);
