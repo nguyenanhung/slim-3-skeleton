@@ -15,4 +15,5 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 
 $app->group('', function () use ($app) {
     $app->get('/app/test', App\AppController::class . ':test');
+    $app->get('/app/testDb', App\AppController::class . ':testDb');
 });

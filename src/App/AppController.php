@@ -9,6 +9,8 @@
 
 namespace App;
 
+use App\Library\BaseModel;
+use App\Library\Config;
 use Psr\Container\ContainerInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
@@ -52,4 +54,35 @@ class AppController
 
         return $response->withJson($params);
     }
+
+    /**
+     * Function testDb
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 13:56
+     *
+     * @param \Slim\Http\Request  $request
+     * @param \Slim\Http\Response $response
+     *
+     * @return \Slim\Http\Response
+     */
+    public function testDb(Request $request, Response $response)
+    {
+        $config = Config::getSettings();
+        $db     = new BaseModel($config['db']);
+        $db->setTable('TuVi');
+        //
+        $params = [
+            'request' => $request->getQueryParams(),
+            'data'    => [
+                'checkExists' => $db->checkExists('102001'),
+                'getLatest'   => $db->getLatest('id'),
+                'getOldest'   => $db->getOldest('id'),
+                'getInfo'     => $db->getInfo('10200'),
+            ]
+        ];
+
+        return $response->withJson($params);
+    }
+
 }

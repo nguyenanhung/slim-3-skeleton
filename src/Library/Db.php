@@ -31,7 +31,8 @@ class Db
     {
         $pdo = new \Slim\PDO\Database($db['dsn'], $db['username'], $db['password']);
         $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+        // Cấu hình dữ liệu trả về luôn ở dạng Object
+        $pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_OBJ);
 
         return $pdo;
     }

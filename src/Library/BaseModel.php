@@ -52,13 +52,13 @@ class BaseModel
      * @time  : 10/29/18 11:53
      *
      * @param string $value
-     * @param string $field
+     * @param string $column
      *
      * @return \Slim\PDO\Statement\SelectStatement
      */
-    public function checkExists($value = '', $field = 'id')
+    public function checkExists($value = '', $column = 'id')
     {
-        return $this->db->select()->from($this->table)->where($value, '=', $field)->count($field);
+        return $this->db->select([$column])->from($this->table)->where($column, '=', $value)->count($column, 'count')->execute()->fetch();
     }
 
     /**
@@ -67,13 +67,13 @@ class BaseModel
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 11:56
      *
-     * @param string $field
+     * @param string $column
      *
      * @return \Slim\PDO\Statement\SelectStatement
      */
-    public function getLatest($field = 'created_at')
+    public function getLatest($column = 'created_at')
     {
-        return $this->db->select()->from($this->table)->max($field)->execute()->fetch();
+        return $this->db->select()->from($this->table)->max($column)->execute()->fetch();
     }
 
     /**
@@ -82,45 +82,67 @@ class BaseModel
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 11:56
      *
-     * @param string $field
+     * @param string $column
      *
      * @return \Slim\PDO\Statement\SelectStatement
      */
-    public function getOldest($field = 'created_at')
+    public function getOldest($column = 'created_at')
     {
-        return $this->db->select()->from($this->table)->min($field)->execute()->fetch();
+        return $this->db->select()->from($this->table)->min($column)->execute()->fetch();
     }
 
     /**
      * Function getInfo
      *
      * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 12:02
+     * @time  : 10/29/18 14:33
      *
      * @param string $value
-     * @param string $field
+     * @param string $column
      *
      * @return mixed
      */
-    public function getInfo($value = '', $field = '')
+    public function getInfo($value = '', $column = 'id')
     {
         $db = $this->db->select()->from($this->table);
         if (is_array($value)) {
-            foreach ($value as $column => $val) {
+            foreach ($value as $col => $val) {
                 if (is_array($val)) {
-                    $db->whereIn($column, $val);
+                    $db->whereIn($col, $val);
                 } else {
-                    $db->where($column, '=', $val);
+                    $db->where($col, '=', $val);
                 }
             }
         } else {
             if (is_array($value)) {
-                $db->whereIn($field, $value);
+                $db->whereIn($column, $value);
             } else {
-                $db->where($field, '=', $value);
+                $db->where($column, '=', $value);
             }
         }
 
         return $db->execute()->fetch();
+    }
+
+    /**
+     * Function getValue
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 14:31
+     *
+     * @param string|array $value
+     * @param string       $column
+     * @param string|null  $columnOutput
+     *
+     * @return null
+     */
+    public function getValue($value = '', $column = '', $columnOutput = '')
+    {
+        $result = $this->getInfo($value, $column);
+        if (!empty($columnOutput) && is_object($result) && isset($result->$columnOutput)) {
+            return $result->$columnOutput;
+        } else {
+            return NULL;
+        }
     }
 }

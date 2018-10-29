@@ -1,5 +1,5 @@
 <?php
-define('PROJECT_ENV', 'production');
+// define('PROJECT_ENV', 'production');
 
 return [
     'settings' => [
