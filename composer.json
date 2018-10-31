@@ -12,6 +12,7 @@
         "router",
         "psr7"
     ],
+    "type": "project",
     "homepage": "http://github.com/nguyenanhung/slim-3-skeleton",
     "license": "MIT",
     "authors": [
