@@ -38,6 +38,27 @@ class Config
     }
 
     /**
+     * Function getConfig
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 2018-11-29 17:02
+     *
+     * @param string $file
+     *
+     * @return array|mixed
+     */
+    public static function getConfig($file = '')
+    {
+        $path       = realpath(__DIR__ . '/../config/') . DIRECTORY_SEPARATOR;
+        $configFile = $path . $file;
+        if (is_file($configFile) && file_exists($configFile)) {
+            return require($configFile);
+        }
+
+        return [];
+    }
+
+    /**
      * Function getSettings
      *
      * @author: 713uk13m <dev@nguyenanhung.com>

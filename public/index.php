@@ -3,13 +3,13 @@ if (PHP_SAPI == 'cli-server') {
     // To help the built-in PHP dev server, check if the request was actually for
     // something which should probably be served as a static file
     $url  = parse_url($_SERVER['REQUEST_URI']);
-    $file = __DIR__ . $url['path'];
+    $file = realpath(__DIR__ . '/') . $url['path'];
     if (is_file($file)) {
         return FALSE;
     }
 }
-require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'bootstrap.php';
-require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'bootstrap.php';
+require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 session_start();
 

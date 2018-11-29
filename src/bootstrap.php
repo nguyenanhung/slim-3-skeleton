@@ -8,8 +8,7 @@
  */
 
 // Register global constants
-require __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
+require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . 'constants.php';
 
 // Register common helper
-
-require __DIR__ . DIRECTORY_SEPARATOR . 'helpers.php';
+require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . 'helpers.php';
