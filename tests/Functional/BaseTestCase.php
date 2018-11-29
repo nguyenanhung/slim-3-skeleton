@@ -1,6 +1,7 @@
 <?php
 
-namespace Tests\Functional;
+namespace Slim3SkeletonTests\Functional;
+
 require __DIR__ . '/../../src/classmap.php';
 
 use Slim\App;
@@ -8,6 +9,7 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
 use Symfony\Component\Console\Application;
+
 /**
  * This is an example class that shows how you could set up a method that
  * runs the application. Note that it doesn't cover all use-cases and is
@@ -94,6 +96,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
     {
         $console = new Application();
         $console->add($command);
+
         return $console->run();
     }
 }

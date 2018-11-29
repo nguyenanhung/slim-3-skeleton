@@ -47,13 +47,17 @@
         "psr-4": {
             "App\\": "src/App/",
             "App\\Command\\": "src/Commands/",
+            "App\\Handler\\": "src/Handler/",
+            "App\\Helper\\": "src/Helper/",
+            "App\\Http\\": "src/Http/",
             "App\\Library\\": "src/Library/",
-            "App\\Helper\\": "src/Helper/"
+            "App\\Middleware\\": "src/Middleware/",
+            "App\\Provider\\": "src/Provider/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Slim3SkeletonTests\\": "tests/"
         }
     },
     "config": {

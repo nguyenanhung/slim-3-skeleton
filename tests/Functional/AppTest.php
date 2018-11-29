@@ -1,7 +1,12 @@
 <?php
 
-namespace Tests\Functional;
+namespace Slim3SkeletonTests\Functional;
 
+/**
+ * Class AppTest
+ *
+ * @package Slim3SkeletonTests\Functional
+ */
 class AppTest extends BaseTestCase
 {
     /**
