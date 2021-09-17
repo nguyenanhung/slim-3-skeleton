@@ -13,13 +13,13 @@
         "psr7"
     ],
     "type": "project",
-    "homepage": "http://github.com/nguyenanhung/slim-3-skeleton",
+    "homepage": "https://github.com/nguyenanhung/slim-3-skeleton",
     "license": "MIT",
     "authors": [
         {
             "name": "Josh Lockhart",
             "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "homepage": "https://www.joshlockhart.com/"
         },
         {
             "name": "Nguyen An Hung",
@@ -28,20 +28,20 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0",
+        "php": ">=5.6",
         "ext-pdo": "*",
         "ext-json": "*",
         "slim/slim": "^3.12",
         "faapz/pdo": "^1.12",
         "slim/flash": "^0.4",
         "slim/csrf": "^0.8",
-        "slim/php-view": "^2.0",
-        "monolog/monolog": "^1.23",
-        "symfony/console": "^3.4"
+        "slim/php-view": "^2.2",
+        "monolog/monolog": "^1.26",
+        "mnapoli/silly": "1.5.1"
     },
     "require-dev": {
         "phpunit/phpunit": ">=4.8 < 6.0",
-        "kint-php/kint": "^3.0"
+        "kint-php/kint": "^3.3"
     },
     "autoload": {
         "psr-4": {

@@ -7,6 +7,7 @@
  * Time: 16:44
  */
 
+
 // DIC configuration
 
 $container = $app->getContainer();
@@ -58,7 +59,7 @@ $container['logger'] = function ($c) {
  */
 $container['db'] = function ($app) {
     $settings = $app->get('settings')['db'];
-    $pdo      = new \Slim\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
+    $pdo      = new FaaPz\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Cấu hình dữ liệu trả về luôn ở dạng Object
     $pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_OBJ);

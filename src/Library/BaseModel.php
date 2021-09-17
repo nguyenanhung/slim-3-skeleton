@@ -37,7 +37,7 @@ class BaseModel implements BaseModelInterface
     const ORDER_DESCENDING                  = 'desc';
     const PRIMARY_KEY                       = 'id';
 
-    /** @var object \Slim\PDO\Database */
+    /** @var object \FaaPz\PDO\Database */
     protected $db;
     /** @var string Table to Setup */
     protected $table;
@@ -80,7 +80,7 @@ class BaseModel implements BaseModelInterface
      *
      * @return mixed
      */
-    public function checkExists($value = '', $column = 'id', $as = 'count', $distinct = FALSE)
+    public function checkExists($value = '', $column = 'id', $as = 'count', $distinct = false)
     {
         return $this->db->select([$column])->from($this->table)->where($column, self::OPERATOR_EQUAL_TO, $value)->count($column, $as, $distinct)->execute()->fetch();
     }
@@ -98,7 +98,7 @@ class BaseModel implements BaseModelInterface
      *
      * @return mixed
      */
-    public function getLatest($column = 'created_at', $as = NULL)
+    public function getLatest($column = 'created_at', $as = null)
     {
         return $this->db->select()->from($this->table)->max($column, $as)->execute()->fetch();
     }
@@ -116,7 +116,7 @@ class BaseModel implements BaseModelInterface
      *
      * @return mixed
      */
-    public function getOldest($column = 'created_at', $as = NULL)
+    public function getOldest($column = 'created_at', $as = null)
     {
         return $this->db->select()->from($this->table)->min($column, $as)->execute()->fetch();
     }
@@ -132,7 +132,7 @@ class BaseModel implements BaseModelInterface
      *
      * @return mixed
      */
-    public function getAvg($column = 'created_at', $as = NULL)
+    public function getAvg($column = 'created_at', $as = null)
     {
         return $this->db->select()->from($this->table)->avg($column, $as)->execute()->fetch();
     }
@@ -194,7 +194,7 @@ class BaseModel implements BaseModelInterface
         if (!empty($columnOutput) && is_object($result) && isset($result->$columnOutput)) {
             return $result->$columnOutput;
         } else {
-            return NULL;
+            return null;
         }
     }
 
@@ -237,7 +237,7 @@ class BaseModel implements BaseModelInterface
      *
      * @return array Mảng dữ liệu phù hợp với yêu cầu map theo biến format truyền vào
      */
-    public function getResult($wheres = [], $selectColumn = '*', $options = NULL)
+    public function getResult($wheres = [], $selectColumn = '*', $options = null)
     {
         $selectColumn = !is_array($selectColumn) ? [$selectColumn] : ['*'];
         $db           = $this->db->select($selectColumn)->from($this->table);
@@ -274,7 +274,7 @@ class BaseModel implements BaseModelInterface
      *
      * @return mixed
      */
-    public function getSum($column = '*', $as = NULL, $wheres = [])
+    public function getSum($column = '*', $as = null, $wheres = [])
     {
         $columns = !is_array($column) ? [$column] : ['*'];
         $db      = $this->db->select($columns)->from($this->table);
@@ -306,7 +306,7 @@ class BaseModel implements BaseModelInterface
     public function add($data = [])
     {
         if (!is_array($data)) {
-            return NULL;
+            return null;
         }
 
         return $this->db->insert($data)->into($this->table)->execute();

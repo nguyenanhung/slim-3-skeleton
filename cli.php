@@ -7,9 +7,10 @@
  * Date: 10/23/18
  * Time: 22:24
  */
-require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
-require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'bootstrap.php';
-require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'classmap.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/src/bootstrap.php';
+require_once __DIR__ . '/src/classmap.php';
+
 
 use Symfony\Component\Console\Application;
 

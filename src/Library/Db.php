@@ -26,11 +26,11 @@ class Db
      *
      * @param array $db
      *
-     * @return \Slim\PDO\Database
+     * @return \FaaPz\PDO\Database
      */
     public static function load($db = [])
     {
-        $pdo = new \Slim\PDO\Database($db['dsn'], $db['username'], $db['password']);
+        $pdo = new \FaaPz\PDO\Database($db['dsn'], $db['username'], $db['password']);
         $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         // Cấu hình dữ liệu trả về luôn ở dạng Object
         $pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_OBJ);

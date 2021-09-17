@@ -5,11 +5,11 @@ if (PHP_SAPI == 'cli-server') {
     $url  = parse_url($_SERVER['REQUEST_URI']);
     $file = realpath(__DIR__ . '/') . $url['path'];
     if (is_file($file)) {
-        return FALSE;
+        return false;
     }
 }
-require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'bootstrap.php';
-require realpath(__DIR__ . '/') . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require __DIR__ . '/../src/bootstrap.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
@@ -17,7 +17,7 @@ session_start();
 $settings = require SOURCE_PATH . 'settings.php';
 
 /** @var object $app */
-$app = new \Slim\App($settings);
+$app = new Slim\App($settings);
 
 // Set up dependencies
 require SOURCE_PATH . 'dependencies.php';

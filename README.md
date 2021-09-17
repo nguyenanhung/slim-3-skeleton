@@ -1,6 +1,9 @@
+[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/v)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![Total Downloads](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/downloads)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/v/unstable)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![License](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/license)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/require/php)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+
 # Slim Framework 3 Skeleton Application
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the **PHP-View** template renderer, **Slim-PDO** is Database Handle, **symfony/console** is Console Handle. It also uses the **Monolog** logger.
+Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the **PHP-View** template renderer, **Slim-PDO** is Database Handle, **symfony/console** is Console
+Handle. It also uses the **Monolog** logger.
 
 This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
 
@@ -36,7 +39,7 @@ Run this command in the application directory to run the test suite
 php composer.phar test
 ```
 
-or 
+or
 
 ```shell
 ./vendor/bin/phpunit
@@ -54,15 +57,13 @@ Example
 composer worker app:test-command
 ```
 
-or 
+or
 
 ```shell
 php cli.php  app:test-command
 ```
 
 @see: https://symfony.com/doc/3.4/components/console.html
-
-
 
 ## Structure Project
 
@@ -138,11 +139,9 @@ Now, Project structure project is follow structure below
 425 directories, 2226 files
 ```
 
-
-
 ## Contact
 
-If any quetion & request, please contact following infomation
+If any question & request, please contact following infomation
 
 | Name        | Email                | Skype            | Facebook      |
 | ----------- | -------------------- | ---------------- | ------------- |
