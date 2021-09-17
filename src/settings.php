@@ -10,8 +10,8 @@
 // Settings Data
 return [
     'settings' => [
-        'displayErrorDetails'    => TRUE, // set to false in production
-        'addContentLengthHeader' => FALSE, // Allow the web server to send the content-length header
+        'displayErrorDetails'    => true, // set to false in production
+        'addContentLengthHeader' => false, // Allow the web server to send the content-length header
         // Site Url
         'base_url'               => '',
         // Renderer settings
@@ -22,7 +22,7 @@ return [
         'logger'                 => [
             'name'  => 'app',
             'path'  => isset($_ENV['docker']) ? 'php://stdout' : LOGS_PATH . 'Log-' . date('Y-m-d') . '.log',
-            'level' => \Monolog\Logger::DEBUG,
+            'level' => Monolog\Logger::DEBUG,
         ],
         // Cấu hình Database
         'db'                     => [

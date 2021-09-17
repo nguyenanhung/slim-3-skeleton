@@ -16,7 +16,7 @@ session_start();
 // Instantiate the app
 $settings = require SOURCE_PATH . 'settings.php';
 
-/** @var object $app */
+/** @var Slim\App $app */
 $app = new Slim\App($settings);
 
 // Set up dependencies

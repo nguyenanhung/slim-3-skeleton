@@ -16,7 +16,7 @@ if (!function_exists('ipAddress')) {
      *
      * @return bool|int|string
      */
-    function ipAddress($convertToInteger = FALSE)
+    function ipAddress($convertToInteger = false)
     {
         $ip_keys = [
             0 => 'HTTP_X_FORWARDED_FOR',
@@ -30,14 +30,12 @@ if (!function_exists('ipAddress')) {
             8 => 'REMOTE_ADDR'
         ];
         foreach ($ip_keys as $key) {
-            if (array_key_exists($key, $_SERVER) === TRUE) {
+            if (array_key_exists($key, $_SERVER) === true) {
                 foreach (explode(',', $_SERVER[$key]) as $ip) {
                     $ip = trim($ip);
                     if (ipValidate($ip)) {
-                        if ($convertToInteger === TRUE) {
-                            $result = ip2long($ip);
-
-                            return $result;
+                        if ($convertToInteger === true) {
+                            return ip2long($ip);
                         }
 
                         return $ip;
@@ -46,7 +44,7 @@ if (!function_exists('ipAddress')) {
             }
         }
 
-        return FALSE;
+        return false;
     }
 
     /**
@@ -61,11 +59,11 @@ if (!function_exists('ipAddress')) {
      */
     function ipValidate($ip)
     {
-        if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
-            return FALSE;
+        if (filter_var($ip, FILTER_VALIDATE_IP) === false) {
+            return false;
         }
 
-        return TRUE;
+        return true;
     }
 }
 if (!function_exists('arrayToObject')) {
@@ -80,16 +78,16 @@ if (!function_exists('arrayToObject')) {
      *
      * @return array|bool|\stdClass
      */
-    function arrayToObject($array = [], $str_to_lower = FALSE)
+    function arrayToObject($array = [], $str_to_lower = false)
     {
         if (!is_array($array)) {
             return $array;
         }
-        $object = new \stdClass();
-        if (is_array($array) && count($array) > 0) {
+        $object = new stdClass();
+        if (count($array) > 0) {
             foreach ($array as $name => $value) {
                 $name = trim($name);
-                if ($str_to_lower === TRUE) {
+                if ($str_to_lower === true) {
                     $name = strtolower($name);
                 }
                 if (!empty($name)) {
@@ -100,6 +98,6 @@ if (!function_exists('arrayToObject')) {
             return $object;
         }
 
-        return FALSE;
+        return false;
     }
 }

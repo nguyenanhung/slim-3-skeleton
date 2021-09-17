@@ -9,7 +9,9 @@
 
 
 // DIC configuration
-
+/**
+ * @var \Slim\App $app
+ */
 $container = $app->getContainer();
 
 /**
@@ -29,14 +31,15 @@ $container['renderer'] = function ($c) {
 };
 
 /**
- * monolog
+ * Function
  *
- * @author: 713uk13m <dev@nguyenanhung.com>
- * @time  : 10/20/18 16:00
- *
- * @param object $c Container
+ * @param $c
  *
  * @return \Monolog\Logger
+ * @throws \Exception
+ * @author   : 713uk13m <dev@nguyenanhung.com>
+ * @copyright: 713uk13m <dev@nguyenanhung.com>
+ * @time     : 09/17/2021 34:49
  */
 $container['logger'] = function ($c) {
     $settings = $c->get('settings')['logger'];
@@ -62,7 +65,7 @@ $container['db'] = function ($app) {
     $pdo      = new FaaPz\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Cấu hình dữ liệu trả về luôn ở dạng Object
-    $pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_OBJ);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
     return $pdo;
 };
