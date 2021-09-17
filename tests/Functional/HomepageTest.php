@@ -15,8 +15,7 @@ class HomepageTest extends BaseTestCase
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/24/18 00:35
      *
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
+     * @throws \Throwable
      */
     public function testGetHomepageWithoutName()
     {
@@ -32,8 +31,7 @@ class HomepageTest extends BaseTestCase
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/24/18 00:35
      *
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
+     * @throws \Throwable
      */
     public function testPostHomepageNotAllowed()
     {

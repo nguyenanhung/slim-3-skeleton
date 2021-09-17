@@ -9,6 +9,7 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
 use Symfony\Component\Console\Application;
+use PHPUnit_Framework_TestCase;
 
 /**
  * This is an example class that shows how you could set up a method that
@@ -16,14 +17,14 @@ use Symfony\Component\Console\Application;
  * tuned to the specifics of this skeleton app, so if your needs are
  * different, you'll need to change it.
  */
-class BaseTestCase extends \PHPUnit_Framework_TestCase
+class BaseTestCase extends PHPUnit_Framework_TestCase
 {
     /**
      * Use middleware when running application?
      *
      * @var bool
      */
-    protected $withMiddleware = TRUE;
+    protected $withMiddleware = true;
 
     /**
      * Process the application given a request method and URI
@@ -32,11 +33,10 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
      * @param string            $requestUri    the request URI
      * @param array|object|null $requestData   the request data
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Slim\Http\Response
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \Throwable
      */
-    public function runApp($requestMethod, $requestUri, $requestData = NULL)
+    public function runApp($requestMethod, $requestUri, $requestData = null)
     {
         // Create a mock environment for testing with
         $environment = Environment::mock(
@@ -75,10 +75,8 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
         require __DIR__ . '/../../src/routes.php';
 
         // Process the application
-        $response = $app->process($request, $response);
-
         // Return the response
-        return $response;
+        return $app->process($request, $response);
     }
 
     /**

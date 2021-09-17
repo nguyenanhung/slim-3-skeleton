@@ -15,8 +15,7 @@ class AppTest extends BaseTestCase
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/24/18 00:36
      *
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
+     * @throws \Throwable
      */
     public function testGetAppTest()
     {
@@ -30,8 +29,7 @@ class AppTest extends BaseTestCase
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 16:28
      *
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
+     * @throws \Throwable
      */
     public function testGetAppDbTest()
     {
@@ -45,8 +43,7 @@ class AppTest extends BaseTestCase
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/24/18 00:35
      *
-     * @throws \Slim\Exception\MethodNotAllowedException
-     * @throws \Slim\Exception\NotFoundException
+     * @throws \Throwable
      */
     public function testPostAppTestNotAllowed()
     {
