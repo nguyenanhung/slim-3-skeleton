@@ -49,23 +49,23 @@ class TestCommand extends Command
     /**
      * Function execute
      *
-     * @author  : 713uk13m <dev@nguyenanhung.com>
-     * @time    : 10/23/18 22:28
-     *
-     * @param \Symfony\Component\Console\Input\InputInterface   $input
+     * @param \Symfony\Component\Console\Input\InputInterface $input
      * @param \Symfony\Component\Console\Output\OutputInterface $output
      *
      * @command php cli.php app:demo-command
      *
      * @return int|null|void
+     * @author  : 713uk13m <dev@nguyenanhung.com>
+     * @time    : 10/23/18 22:28
+     *
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
         // Load config
         $settings = Config::getSettings();
         // Example Load DB
-        $db      = Db::load($settings['db']);
-        $query   = $db->select()->from('TuVi')->where('date', '=', '2018-10-24');
+        $db = Db::load($settings['db']);
+        $query = $db->select()->from('TuVi')->where('date', '=', '2018-10-24');
         $execute = $query->execute();
         $content = $execute->fetch();
         $output->writeLn(json_encode($content));

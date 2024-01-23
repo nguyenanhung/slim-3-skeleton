@@ -23,4 +23,9 @@ $console = new Application();
 $console->add($test_command);
 
 // Run application
-$console->run();
+try {
+    $console->run();
+} catch (Exception $exception) {
+    echo $exception->getMessage();
+}
+

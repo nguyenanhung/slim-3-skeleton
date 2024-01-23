@@ -9,12 +9,12 @@ if (!function_exists('ipAddress')) {
     /**
      * Function ipAddress
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/19/18 15:55
-     *
      * @param bool $convertToInteger
      *
      * @return bool|int|string
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/19/18 15:55
+     *
      */
     function ipAddress($convertToInteger = false)
     {
@@ -50,12 +50,12 @@ if (!function_exists('ipAddress')) {
     /**
      * Function ipValidate
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/19/18 15:55
-     *
      * @param $ip
      *
      * @return bool
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/19/18 15:55
+     *
      */
     function ipValidate($ip)
     {
@@ -70,13 +70,13 @@ if (!function_exists('arrayToObject')) {
     /**
      * Hàm chuyển dữ liệu từ 1 mảng thành 1 object
      *
+     * @param array $array
+     * @param bool $str_to_lower
+     *
+     * @return array|bool|\stdClass
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/20/18 11:07
      *
-     * @param array $array
-     * @param bool  $str_to_lower
-     *
-     * @return array|bool|\stdClass
      */
     function arrayToObject($array = [], $str_to_lower = false)
     {

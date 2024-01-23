@@ -21,12 +21,12 @@ class Config
     /**
      * Function getData
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/23/18 23:22
-     *
      * @param string $path
      *
      * @return array|mixed
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/23/18 23:22
+     *
      */
     public static function getData($path = '')
     {
@@ -40,16 +40,16 @@ class Config
     /**
      * Function getConfig
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 2018-11-29 17:02
-     *
      * @param string $file
      *
      * @return array|mixed
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 2018-11-29 17:02
+     *
      */
     public static function getConfig($file = '')
     {
-        $path       = realpath(__DIR__ . '/../config/') . DIRECTORY_SEPARATOR;
+        $path = realpath(__DIR__ . '/../config/') . DIRECTORY_SEPARATOR;
         $configFile = $path . $file;
         if (is_file($configFile) && file_exists($configFile)) {
             return require($configFile);
@@ -61,10 +61,10 @@ class Config
     /**
      * Function getSettings
      *
+     * @return array
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/23/18 23:58
      *
-     * @return array
      */
     public static function getSettings()
     {

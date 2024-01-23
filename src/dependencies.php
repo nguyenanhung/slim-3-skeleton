@@ -17,12 +17,12 @@ $container = $app->getContainer();
 /**
  * view renderer
  *
- * @author: 713uk13m <dev@nguyenanhung.com>
- * @time  : 10/20/18 16:00
- *
  * @param object $c Container
  *
  * @return \Slim\Views\PhpRenderer
+ * @author: 713uk13m <dev@nguyenanhung.com>
+ * @time  : 10/20/18 16:00
+ *
  */
 $container['renderer'] = function ($c) {
     $settings = $c->get('settings')['renderer'];
@@ -43,7 +43,7 @@ $container['renderer'] = function ($c) {
  */
 $container['logger'] = function ($c) {
     $settings = $c->get('settings')['logger'];
-    $logger   = new Monolog\Logger($settings['name']);
+    $logger = new Monolog\Logger($settings['name']);
     $logger->pushProcessor(new Monolog\Processor\UidProcessor());
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
 
@@ -53,16 +53,16 @@ $container['logger'] = function ($c) {
 /**
  * Hàm register DB
  *
- * @author: 713uk13m <dev@nguyenanhung.com>
- * @time  : 10/20/18 15:45
- *
  * @param object $app
  *
  * @return null
+ * @author: 713uk13m <dev@nguyenanhung.com>
+ * @time  : 10/20/18 15:45
+ *
  */
 $container['db'] = function ($app) {
     $settings = $app->get('settings')['db'];
-    $pdo      = new FaaPz\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
+    $pdo = new FaaPz\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Cấu hình dữ liệu trả về luôn ở dạng Object
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);

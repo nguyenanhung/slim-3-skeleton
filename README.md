@@ -141,11 +141,11 @@ Now, Project structure project is follow structure below
 
 ## Contact
 
-If any question & request, please contact following infomation
+If any question & request, please contact following information
 
-| Name        | Email                | Skype            | Facebook      |
-| ----------- | -------------------- | ---------------- | ------------- |
-| Hung Nguyen | dev@nguyenanhung.com | nguyenanhung5891 | [@nguyenanhung](https://fb.com/nguyenanhung) |
+| Name        | Email                | GitHub        | Facebook      |
+|-------------|----------------------|---------------|---------------|
+| Hung Nguyen | dev@nguyenanhung.com | @nguyenanhung | @nguyenanhung |
 
 From Hanoi with Love <3
 

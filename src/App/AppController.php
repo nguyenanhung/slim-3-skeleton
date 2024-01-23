@@ -39,25 +39,25 @@ class AppController
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-        $this->db        = $this->container->db;
-        $this->logger    = $this->container->logger;
+        $this->db = $this->container->db;
+        $this->logger = $this->container->logger;
     }
 
     /**
      * Function test
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/23/18 10:47
-     *
-     * @param \Slim\Http\Request  $request
+     * @param \Slim\Http\Request $request
      * @param \Slim\Http\Response $response
      *
      * @return \Slim\Http\Response
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/23/18 10:47
+     *
      */
     public function test(Request $request, Response $response)
     {
         $this->logger->info(__FUNCTION__);
-        $params            = $request->getQueryParams();
+        $params = $request->getQueryParams();
         $params['version'] = VERSION;
 
         return $response->withJson($params);
@@ -66,31 +66,29 @@ class AppController
     /**
      * Function testDb
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 13:56
-     *
-     * @param \Slim\Http\Request  $request
+     * @param \Slim\Http\Request $request
      * @param \Slim\Http\Response $response
      *
      * @return \Slim\Http\Response
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 13:56
+     *
      */
     public function testDb(Request $request, Response $response)
     {
         $config = Config::getSettings();
-        $db     = new BaseModel($config['db']);
+        $db = new BaseModel($config['db']);
         $db->setTable('TuVi');
         //
         $params = [
             'request' => $request->getQueryParams(),
-            'data'    => [
-                'sum'               => $db->getSum('id'),
-                'checkExists'       => $db->checkExists('102001'),
-                'getLatest'         => $db->getLatest('id'),
-                'getOldest'         => $db->getOldest('id'),
-                'getInfo'           => $db->getInfo('10200'),
+            'data' => [
+                'sum' => $db->getSum('id'),
+                'checkExists' => $db->checkExists('102001'),
+                'getLatest' => $db->getLatest('id'),
+                'getOldest' => $db->getOldest('id'),
+                'getInfo' => $db->getInfo('10200'),
                 'getDistinctResult' => $db->getDistinctResult('service'),
-                //                'add'               => $db->add(['service' => 'TV', 'mt' => 'TEST - ' . rand(1, 999999),
-                //                                                 'date'    => date('Y-m-d'), 'timeCreated' => date('Y-m-d H:i:s')])
             ]
         ];
 

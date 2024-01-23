@@ -32,14 +32,14 @@
         "ext-pdo": "*",
         "ext-json": "*",
         "slim/slim": "^3.12",
-        "faapz/pdo": "^1.12",
+        "nguyenanhung/pdo": "^1.0 || ^2.0 || ^3.0",
+        "nguyenanhung/my-debug": "^1.0 || ^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "nguyenanhung/console": "^1.0 || ^2.0 || ^3.0",
         "slim/flash": "^0.4",
         "slim/csrf": "^0.8",
         "slim/php-view": "^2.2",
-        "monolog/monolog": "^1.26",
-        "mnapoli/silly": "1.5.1"
-    },
-    "require-dev": {
         "roave/security-advisories": "dev-latest",
         "phpunit/phpunit": ">=4.8 < 6.0",
         "kint-php/kint": "^3.3"

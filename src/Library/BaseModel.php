@@ -18,24 +18,24 @@ namespace App\Library;
  */
 class BaseModel implements BaseModelInterface
 {
-    const OPERATOR_EQUAL_TO                 = '=';
-    const OP_EQ                             = '=';
-    const OPERATOR_NOT_EQUAL_TO             = '!=';
-    const OP_NE                             = '!=';
-    const OPERATOR_LESS_THAN                = '<';
-    const OP_LT                             = '<';
-    const OPERATOR_LESS_THAN_OR_EQUAL_TO    = '<=';
-    const OP_LTE                            = '<=';
-    const OPERATOR_GREATER_THAN             = '>';
-    const OP_GT                             = '>';
+    const OPERATOR_EQUAL_TO = '=';
+    const OP_EQ = '=';
+    const OPERATOR_NOT_EQUAL_TO = '!=';
+    const OP_NE = '!=';
+    const OPERATOR_LESS_THAN = '<';
+    const OP_LT = '<';
+    const OPERATOR_LESS_THAN_OR_EQUAL_TO = '<=';
+    const OP_LTE = '<=';
+    const OPERATOR_GREATER_THAN = '>';
+    const OP_GT = '>';
     const OPERATOR_GREATER_THAN_OR_EQUAL_TO = '>=';
-    const OP_GTE                            = '>=';
-    const OPERATOR_IS_LIKE                  = 'like';
-    const OPERATOR_IS_NULL                  = 'is null';
-    const OPERATOR_IS_NOT_NULL              = 'is not null';
-    const ORDER_ASCENDING                   = 'asc';
-    const ORDER_DESCENDING                  = 'desc';
-    const PRIMARY_KEY                       = 'id';
+    const OP_GTE = '>=';
+    const OPERATOR_IS_LIKE = 'like';
+    const OPERATOR_IS_NULL = 'is null';
+    const OPERATOR_IS_NOT_NULL = 'is not null';
+    const ORDER_ASCENDING = 'asc';
+    const ORDER_DESCENDING = 'desc';
+    const PRIMARY_KEY = 'id';
 
     /** @var object \FaaPz\PDO\Database */
     protected $db;
@@ -55,10 +55,10 @@ class BaseModel implements BaseModelInterface
     /**
      * Function setTable
      *
+     * @param string $table Table Database to Setup
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 11:53
      *
-     * @param string $table Table Database to Setup
      */
     public function setTable($table = '')
     {
@@ -68,17 +68,17 @@ class BaseModel implements BaseModelInterface
     /**
      * Function checkExists
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 15:08
-     *
      * @param string $value
      * @param string $column
      * @param string $as
-     * @param bool   $distinct
-     *
-     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/AGGREGATES.md#countcolumn---as--null-distinct--false
+     * @param bool $distinct
      *
      * @return mixed
+     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/AGGREGATES.md#countcolumn---as--null-distinct--false
+     *
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 15:08
+     *
      */
     public function checkExists($value = '', $column = 'id', $as = 'count', $distinct = false)
     {
@@ -88,15 +88,15 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getLatest
      *
+     * @param string $column
+     * @param null $as
+     *
+     * @return mixed
+     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/AGGREGATES.md#maxcolumn-as--null
+     *
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:07
      *
-     * @param string $column
-     * @param null   $as
-     *
-     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/AGGREGATES.md#maxcolumn-as--null
-     *
-     * @return mixed
      */
     public function getLatest($column = 'created_at', $as = null)
     {
@@ -106,15 +106,15 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getOldest
      *
+     * @param string $column
+     * @param null $as
+     *
+     * @return mixed
+     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/AGGREGATES.md#mincolumn-as--null
+     *
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:06
      *
-     * @param string $column
-     * @param null   $as
-     *
-     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/AGGREGATES.md#mincolumn-as--null
-     *
-     * @return mixed
      */
     public function getOldest($column = 'created_at', $as = null)
     {
@@ -124,13 +124,13 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getAvg
      *
+     * @param string $column
+     * @param null $as
+     *
+     * @return mixed
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:21
      *
-     * @param string $column
-     * @param null   $as
-     *
-     * @return mixed
      */
     public function getAvg($column = 'created_at', $as = null)
     {
@@ -140,21 +140,21 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getInfo
      *
+     * @param string $value
+     * @param string $column
+     * @param null|string|array $selectColumn
+     *
+     * @return mixed
+     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/SELECT.md
+     *
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:10
      *
-     * @param string            $value
-     * @param string            $column
-     * @param null|string|array $selectColumn
-     *
-     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/SELECT.md
-     *
-     * @return mixed
      */
     public function getInfo($value = '', $column = 'id', $selectColumn = ['*'])
     {
         $selectColumn = !is_array($selectColumn) ? [$selectColumn] : ['*'];
-        $db           = $this->db->select($selectColumn)->from($this->table);
+        $db = $this->db->select($selectColumn)->from($this->table);
         if (is_array($value)) {
             foreach ($value as $col => $val) {
                 if (is_array($val)) {
@@ -177,16 +177,16 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getValue
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 15:11
-     *
      * @param string $value
      * @param string $column
      * @param string $columnOutput
      *
+     * @return null|string
      * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/SELECT.md
      *
-     * @return null|string
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 15:11
+     *
      */
     public function getValue($value = '', $column = '', $columnOutput = '')
     {
@@ -201,14 +201,14 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getDistinctResult
      *
+     * @param string|array $selectColumn
+     *
+     * @return array
+     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/SELECT.md#distinct
+     *
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 14:41
      *
-     * @param string|array $selectColumn
-     *
-     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/SELECT.md#distinct
-     *
-     * @return array
      */
     public function getDistinctResult($selectColumn = '')
     {
@@ -220,12 +220,9 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getResult
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 14:45
-     *
-     * @param array|string $wheres              Mảng dữ liệu hoặc giá trị primaryKey cần so sánh điều kiện để update
-     * @param array|string $selectColumn        Mảng dữ liệu danh sách các field cần so sánh
-     * @param null|string  $options             Mảng dữ liệu các cấu hình tùy chọn
+     * @param array|string $wheres Mảng dữ liệu hoặc giá trị primaryKey cần so sánh điều kiện để update
+     * @param array|string $selectColumn Mảng dữ liệu danh sách các field cần so sánh
+     * @param null|string $options Mảng dữ liệu các cấu hình tùy chọn
      *                                          example $options = [
      *                                          'format' => null,
      *                                          'orderBy => [
@@ -233,14 +230,17 @@ class BaseModel implements BaseModelInterface
      *                                          ]
      *                                          ];
      *
+     * @return array Mảng dữ liệu phù hợp với yêu cầu map theo biến format truyền vào
      * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/SELECT.md
      *
-     * @return array Mảng dữ liệu phù hợp với yêu cầu map theo biến format truyền vào
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 14:45
+     *
      */
     public function getResult($wheres = [], $selectColumn = '*', $options = null)
     {
         $selectColumn = !is_array($selectColumn) ? [$selectColumn] : ['*'];
-        $db           = $this->db->select($selectColumn)->from($this->table);
+        $db = $this->db->select($selectColumn)->from($this->table);
         if (!empty($wheres) && is_array($wheres) && count($wheres) > 0) {
             foreach ($wheres as $column => $value) {
                 if (is_array($value)) {
@@ -265,19 +265,19 @@ class BaseModel implements BaseModelInterface
     /**
      * Function getSum
      *
+     * @param string $column
+     * @param string|null $as
+     * @param array $wheres
+     *
+     * @return mixed
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 15:33
      *
-     * @param string      $column
-     * @param string|null $as
-     * @param array       $wheres
-     *
-     * @return mixed
      */
     public function getSum($column = '*', $as = null, $wheres = [])
     {
         $columns = !is_array($column) ? [$column] : ['*'];
-        $db      = $this->db->select($columns)->from($this->table);
+        $db = $this->db->select($columns)->from($this->table);
         if (!empty($wheres) && is_array($wheres) && count($wheres) > 0) {
             foreach ($wheres as $col => $val) {
                 if (is_array($val)) {
@@ -294,14 +294,14 @@ class BaseModel implements BaseModelInterface
     /**
      * Function add
      *
+     * @param array $data
+     *
+     * @return null|string
+     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/INSERT.md
+     *
      * @author: 713uk13m <dev@nguyenanhung.com>
      * @time  : 10/29/18 14:53
      *
-     * @param array $data
-     *
-     * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/INSERT.md
-     *
-     * @return null|string
      */
     public function add($data = [])
     {
@@ -315,15 +315,15 @@ class BaseModel implements BaseModelInterface
     /**
      * Function update
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 14:59
-     *
      * @param array $data
      * @param array $wheres
      *
+     * @return int
      * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/UPDATE.md
      *
-     * @return int
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 14:59
+     *
      */
     public function update($data = [], $wheres = [])
     {
@@ -342,15 +342,15 @@ class BaseModel implements BaseModelInterface
     /**
      * Function delete
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/29/18 15:02
-     *
      * @param string $values
      * @param string $columns
      *
+     * @return int
      * @see   https://github.com/FaaPz/Slim-PDO/blob/master/docs/Statement/DELETE.md
      *
-     * @return int
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/29/18 15:02
+     *
      */
     public function delete($values = '', $columns = '')
     {

@@ -23,28 +23,28 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-defined('ENVIRONMENT') OR define('ENVIRONMENT', 'production');
-defined('VERSION') OR define('VERSION', '3.11.3');
+defined('ENVIRONMENT') or define('ENVIRONMENT', 'production');
+defined('VERSION') or define('VERSION', '3.11.3');
 
 // Project Path
-defined('PROJECT_PATH') OR define('PROJECT_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
+defined('PROJECT_PATH') or define('PROJECT_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
 
 // Directory mapping
-defined('VENDOR_PATH') OR define('VENDOR_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR);
-defined('TEMPLATE_PATH') OR define('TEMPLATE_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR);
-defined('PUBLIC_PATH') OR define('PUBLIC_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
+defined('VENDOR_PATH') or define('VENDOR_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR);
+defined('TEMPLATE_PATH') or define('TEMPLATE_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR);
+defined('PUBLIC_PATH') or define('PUBLIC_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
 
 // Source Path
-defined('SOURCE_PATH') OR define('SOURCE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-defined('APP_PATH') OR define('APP_PATH', SOURCE_PATH . 'App' . DIRECTORY_SEPARATOR);
-defined('COMMANDS_PATH') OR define('COMMANDS_PATH', SOURCE_PATH . 'Commands' . DIRECTORY_SEPARATOR);
-defined('HELPER_PATH') OR define('HELPER_PATH', SOURCE_PATH . 'Helper' . DIRECTORY_SEPARATOR);
-defined('LIBRARY_PATH') OR define('LIBRARY_PATH', SOURCE_PATH . 'Library' . DIRECTORY_SEPARATOR);
+defined('SOURCE_PATH') or define('SOURCE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
+defined('APP_PATH') or define('APP_PATH', SOURCE_PATH . 'App' . DIRECTORY_SEPARATOR);
+defined('COMMANDS_PATH') or define('COMMANDS_PATH', SOURCE_PATH . 'Commands' . DIRECTORY_SEPARATOR);
+defined('HELPER_PATH') or define('HELPER_PATH', SOURCE_PATH . 'Helper' . DIRECTORY_SEPARATOR);
+defined('LIBRARY_PATH') or define('LIBRARY_PATH', SOURCE_PATH . 'Library' . DIRECTORY_SEPARATOR);
 
 // Storage Path
-defined('STORAGE_PATH') OR define('STORAGE_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR);
-defined('CACHE_PATH') OR define('CACHE_PATH', STORAGE_PATH . 'cache' . DIRECTORY_SEPARATOR);
-defined('LOGS_PATH') OR define('LOGS_PATH', STORAGE_PATH . 'logs' . DIRECTORY_SEPARATOR);
+defined('STORAGE_PATH') or define('STORAGE_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR);
+defined('CACHE_PATH') or define('CACHE_PATH', STORAGE_PATH . 'cache' . DIRECTORY_SEPARATOR);
+defined('LOGS_PATH') or define('LOGS_PATH', STORAGE_PATH . 'logs' . DIRECTORY_SEPARATOR);
 
 /*
  *---------------------------------------------------------------
@@ -83,13 +83,13 @@ switch (ENVIRONMENT) {
  * @see http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
  * @see http://tldp.org/LDP/abs/html/exitcodes.html
  */
-defined('EXIT_SUCCESS') OR define('EXIT_SUCCESS', 0); // no errors
-defined('EXIT_ERROR') OR define('EXIT_ERROR', 1); // generic error
-defined('EXIT_CONFIG') OR define('EXIT_CONFIG', 3); // configuration error
-defined('EXIT_UNKNOWN_FILE') OR define('EXIT_UNKNOWN_FILE', 4); // file not found
-defined('EXIT_UNKNOWN_CLASS') OR define('EXIT_UNKNOWN_CLASS', 5); // unknown class
-defined('EXIT_UNKNOWN_METHOD') OR define('EXIT_UNKNOWN_METHOD', 6); // unknown class member
-defined('EXIT_USER_INPUT') OR define('EXIT_USER_INPUT', 7); // invalid user input
-defined('EXIT_DATABASE') OR define('EXIT_DATABASE', 8); // database error
-defined('EXIT__AUTO_MIN') OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
-defined('EXIT__AUTO_MAX') OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+defined('EXIT_SUCCESS') or define('EXIT_SUCCESS', 0); // no errors
+defined('EXIT_ERROR') or define('EXIT_ERROR', 1); // generic error
+defined('EXIT_CONFIG') or define('EXIT_CONFIG', 3); // configuration error
+defined('EXIT_UNKNOWN_FILE') or define('EXIT_UNKNOWN_FILE', 4); // file not found
+defined('EXIT_UNKNOWN_CLASS') or define('EXIT_UNKNOWN_CLASS', 5); // unknown class
+defined('EXIT_UNKNOWN_METHOD') or define('EXIT_UNKNOWN_METHOD', 6); // unknown class member
+defined('EXIT_USER_INPUT') or define('EXIT_USER_INPUT', 7); // invalid user input
+defined('EXIT_DATABASE') or define('EXIT_DATABASE', 8); // database error
+defined('EXIT__AUTO_MIN') or define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
+defined('EXIT__AUTO_MAX') or define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code

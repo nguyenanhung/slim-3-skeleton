@@ -21,12 +21,12 @@ class Db
     /**
      * Function load
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 10/23/18 23:45
-     *
      * @param array $db
      *
      * @return \FaaPz\PDO\Database
+     * @author: 713uk13m <dev@nguyenanhung.com>
+     * @time  : 10/23/18 23:45
+     *
      */
     public static function load($db = [])
     {

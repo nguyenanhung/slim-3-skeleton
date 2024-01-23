@@ -9,14 +9,14 @@
 /**
  * Function registerCommand
  *
+ * @param string $className
  * @author: 713uk13m <dev@nguyenanhung.com>
  * @time  : 10/23/18 22:57
  *
- * @param string $className
  */
 function registerCommand($className = '')
 {
-    $root   = 'src/Commands/';
+    $root = 'src/Commands/';
     $prefix = 'App\\Command\\';
 
     // bỏ prefix
@@ -34,14 +34,14 @@ function registerCommand($className = '')
 /**
  * Function registerLibrary
  *
+ * @param string $className
  * @author: 713uk13m <dev@nguyenanhung.com>
  * @time  : 10/23/18 23:21
  *
- * @param string $className
  */
 function registerLibrary($className = '')
 {
-    $root   = 'src/Library/';
+    $root = 'src/Library/';
     $prefix = 'App\\Library\\';
 
     // bỏ prefix
@@ -59,14 +59,14 @@ function registerLibrary($className = '')
 /**
  * Function registerHelper
  *
+ * @param string $className
  * @author: 713uk13m <dev@nguyenanhung.com>
  * @time  : 10/29/18 16:15
  *
- * @param string $className
  */
 function registerHelper($className = '')
 {
-    $root   = 'src/Helper/';
+    $root = 'src/Helper/';
     $prefix = 'App\\Helper\\';
 
     // bỏ prefix
