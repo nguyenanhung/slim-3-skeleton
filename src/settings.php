@@ -26,9 +26,9 @@ return [
         ],
         // Cấu hình Database
         'db' => [
-            'dsn' => 'mysql:host=127.0.0.1;dbname=slim_test;charset=utf8',
+            'dsn' => 'mysql:host=127.0.0.1;port=33060;dbname=slim_test;charset=utf8',
             'username' => 'root',
-            'password' => '',
+            'password' => 'hungna',
         ]
     ],
 ];

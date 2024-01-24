@@ -20,8 +20,10 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     // Render index view
     return $this->renderer->render($response, 'index.phtml', $args);
 });
+$app->group('/api/v1', function () use ($app) {
+    $app->get('/test', App\AppController::class . ':json');
+});
 
 $app->group('', function () use ($app) {
     $app->get('/app/test', App\AppController::class . ':test');
-    $app->get('/app/testDb', App\AppController::class . ':testDb');
 });
