@@ -24,7 +24,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 defined('ENVIRONMENT') or define('ENVIRONMENT', 'production');
-defined('VERSION') or define('VERSION', '3.11.3');
+defined('VERSION') or define('VERSION', '3.12.5');
 
 // Project Path
 defined('PROJECT_PATH') or define('PROJECT_PATH', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
