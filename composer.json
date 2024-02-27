@@ -1,69 +1,69 @@
 {
-    "name": "nguyenanhung/slim-3-skeleton",
-    "description": "A Slim Framework 3 skeleton application for rapid development",
-    "keywords": [
-        "micro framework",
-        "php micro framework",
-        "slim",
-        "slim 3",
-        "skeleton",
-        "rest",
-        "console",
-        "router",
-        "psr7"
-    ],
-    "type": "project",
-    "homepage": "https://github.com/nguyenanhung/slim-3-skeleton",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "https://www.joshlockhart.com/"
-        },
-        {
-            "name": "Nguyen An Hung",
-            "email": "dev@nguyenanhung.com",
-            "homepage": "https://nguyenanhung.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.6",
-        "ext-pdo": "*",
-        "ext-json": "*",
-        "slim/slim": "^3.12",
-        "nguyenanhung/pdo": "^1.0 || ^2.0 || ^3.0",
-        "nguyenanhung/my-debug": "^1.0 || ^2.0 || ^3.0"
-    },
-    "require-dev": {
-        "nguyenanhung/console": "^1.0 || ^2.0 || ^3.0",
-        "slim/flash": "^0.4",
-        "slim/csrf": "^0.8",
-        "slim/php-view": "^2.2",
-        "roave/security-advisories": "dev-latest",
-        "phpunit/phpunit": ">=4.8 < 6.0",
-        "kint-php/kint": "^3.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/App/",
-            "App\\Command\\": "src/Commands/",
-            "App\\Helper\\": "src/Helper/",
-            "App\\Library\\": "src/Library/",
-            "App\\Provider\\": "src/Provider/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Slim3SkeletonTests\\": "tests/"
-        }
-    },
-    "config": {
-        "process-timeout": 0
-    },
-    "scripts": {
-        "start": "php -S localhost:8080 -t public",
-        "test": "./vendor/bin/phpunit",
-        "worker": "php cli.php"
-    }
+	"name": "nguyenanhung/slim-3-skeleton",
+	"description": "A Slim Framework 3 skeleton application for rapid development",
+	"keywords": [
+		"micro framework",
+		"php micro framework",
+		"slim",
+		"slim 3",
+		"skeleton",
+		"rest",
+		"console",
+		"router",
+		"psr7"
+	],
+	"type": "project",
+	"homepage": "https://github.com/nguyenanhung/slim-3-skeleton",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Josh Lockhart",
+			"email": "info@joshlockhart.com",
+			"homepage": "https://www.joshlockhart.com/"
+		},
+		{
+			"name": "Nguyen An Hung",
+			"email": "dev@nguyenanhung.com",
+			"homepage": "https://nguyenanhung.com"
+		}
+	],
+	"require": {
+		"php": ">=5.6",
+		"ext-pdo": "*",
+		"ext-json": "*",
+		"slim/slim": "^3.12",
+		"nguyenanhung/pdo": "^1.0 || ^2.0 || ^3.0",
+		"nguyenanhung/my-debug": "^1.0 || ^2.0 || ^3.0"
+	},
+	"require-dev": {
+		"nguyenanhung/console": "^1.0 || ^2.0 || ^3.0",
+		"slim/flash": "^0.4",
+		"slim/csrf": "^0.8",
+		"slim/php-view": "^2.2",
+		"roave/security-advisories": "dev-latest",
+		"phpunit/phpunit": ">=4.8 < 6.0",
+		"kint-php/kint": "^3.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "src/App/",
+			"App\\Command\\": "src/Commands/",
+			"App\\Helper\\": "src/Helper/",
+			"App\\Library\\": "src/Library/",
+			"App\\Provider\\": "src/Provider/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Slim3SkeletonTests\\": "tests/"
+		}
+	},
+	"config": {
+		"process-timeout": 0
+	},
+	"scripts": {
+		"start": "php -S localhost:8080 -t public",
+		"test": "./vendor/bin/phpunit",
+		"worker": "php cli.php"
+	}
 }
