@@ -1,4 +1,9 @@
-[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/v)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![Total Downloads](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/downloads)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/v/unstable)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![License](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/license)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/slim-3-skeleton/require/php)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nguyenanhung/slim-3-skeleton.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+[![Total Downloads](https://img.shields.io/packagist/dt/nguyenanhung/slim-3-skeleton.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+[![Daily Downloads](https://img.shields.io/packagist/dd/nguyenanhung/slim-3-skeleton.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/nguyenanhung/slim-3-skeleton.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+[![License](https://img.shields.io/packagist/l/nguyenanhung/slim-3-skeleton.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/nguyenanhung/slim-3-skeleton/php)](https://packagist.org/packages/nguyenanhung/slim-3-skeleton)
 
 # Slim Framework 3 Skeleton Application
 
